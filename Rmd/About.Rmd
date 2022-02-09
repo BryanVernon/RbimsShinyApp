@@ -1,0 +1,67 @@
+---
+title: "About"
+output: html_document
+---
+
+
+# Background
+## Microorganisms are a very diverse group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganism, their metabolic pathways, and the genes that code for these pathways. 
+
+# About RbiMs
+## An interactive open source software tool for using R to reconstruct bin metabolisms (Rbims). 
+
+# RbiMs tutorial
+## Step 1: Upload data into Rbims
+### Run kegg on your protein 
+* Download assembly in a protein file
+  + If using ncbi, downoad genbank protein FASTA file.faa
+* Make a folder and put the resulting .tar files in it
+* for FILE in cd
+* do 
+* tar -xvf jebdjwbd (3).tar
+* gunzip ncbi [tab]/ GCA[tab]
+* done
+* This will result in .faa files in each folder
+* Upload .faa files to KEGG in KofamKOALA
+  + https://www.genome.jp/tools/kofamkoala/
+* Use the read_ko function in Rbims to read your output data
+* bins<- read_ko(data_kofam = "C:/Users/Bryan/Desktop/Bins/")
+Error in read_ko(data_kofam = "C:/Users/Bryan/Desktop/Bins/") : 
+  Must label scaffolds with the name 'Scaffold' or 'scaffold' after 
+  the bin name followed by a '-' or '_'.
+
+#QA. – section
+#What is a tar, tar.gz file? And how do I open it?
+# A TAR file, or tape archive, or tarball is a Consolidated Unix Archive 
+# format file.
+# You can open a .tar file with Open one with 7-Zip, B1 Online Archiver, and 
+# other file unzip tools.
+# You should convert it to archive formats like ZIP, TAR.GZ, etc.
+# You can open .gz files with gunzip command in bash
+# What is refseq and genbank?
+#The NCBI Reference Sequence (RefSeq) project provides sequence records and 
+#related information for numerous organisms, and provides a baseline for medical,
+#functional, and comparative studies. Whereas the International Nucleotide 
+#Sequence Database Collaboration (INSDC, made up of GenBank, the European 
+#Nucleotide Archive, and the DNA Data Bank of Japan) represents an archival
+#repository of all sequences, the RefSeq database is a non-redundant set of 
+#reference standards derived from the INSDC databases that includes chromosomes, 
+#complete genomic molecules (organelle genomes, viruses, plasmids), intermediate 
+#assembled genomic contigs, curated genomic regions, mRNAs, RNAs, and proteins.
+# GenBank® is a comprehensive database that contains publicly available 
+# nucleotide sequences for more than 300 000 organisms named at the genus level
+# or lower, obtained primarily through submissions from individual laboratories 
+# and batch submissions from large-scale sequencing projects, including whole 
+# genome shotgun (WGS) and environmental sampling projects. 
+
+# Problems I encountered
+# could not tar -xvf *.tar with multiple files in directory. I tried doing 
+# tar -xvf filename (1).tar and bash was not reading the parenthesis correctly
+# Needed a "/" at end of path when using read_ko. Need to fix explor kegg tab.
+# gene name does not have "scaffold" in it so read_ko did not work
+
+```{r}
+
+```
+
+

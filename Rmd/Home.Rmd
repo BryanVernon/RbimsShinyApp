@@ -1,0 +1,11 @@
+---
+title: "Home"
+output: html_document
+---
+
+# Visualizing metagenomic data for microorganisms  
+
+## Microorganisms are a very diverse group where many organisms share similar 
+## metabolic pathways and others are very unique. The purpose of this application 
+##is to help visualize these relationships between microorganism, their metabolic
+## pathways, and the genes that code for these pathways. 
