@@ -1,18 +1,17 @@
 ---
-title: "About"
-output: html_document
+output: 
+  rmarkdown::html_document:
+    theme: flatly
 ---
 
 
 # Background
-## Microorganisms are a very diverse group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganism, their metabolic pathways, and the genes that code for these pathways. 
+## Microorganisms are a very diverse group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganisms, their metabolic pathways, and the genes that code for these pathways. 
 
-# About RbiMs
-## An interactive open source software tool for using R to reconstruct bin metabolisms (Rbims). 
 
 # RbiMs tutorial
 ## Step 1: Upload data into Rbims
-### Run kegg on your protein 
+### Running kegg on your FASTA data
 * Download assembly in a protein file
   + If using ncbi, downoad genbank protein FASTA file.faa
 * Make a folder and put the resulting .tar files in it

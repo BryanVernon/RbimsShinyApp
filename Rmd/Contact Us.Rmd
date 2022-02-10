@@ -1,6 +1,8 @@
 ---
 title: "Contact Us"
-output: html_document
+output: 
+  rmarkdown::html_document:
+    theme: flatly
 ---
 # Contact Us
 

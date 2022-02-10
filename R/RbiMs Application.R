@@ -4,9 +4,10 @@ library(markdown)
 # Define UI for application that draws a histogram
 ui <- navbarPage(
   "RbiMs",
-  tabPanel("Home", includeMarkdown("../Rmd/Home.Rmd")),
-  tabPanel("About",includeMarkdown("../Rmd/About.Rmd")),
-  tabPanel("Contact Us",includeMarkdown("../Rmd/Contact Us.Rmd"))
+  tabPanel("Home", includeHTML("../Rmd/Home.html")),
+  tabPanel("About",includeHTML("../Rmd/About.html")),
+  tabPanel("Upload data",includeHTML("../Rmd/Upload-data.html")),
+  tabPanel("Contact Us",includeHTML("../Rmd/Contact-Us.html"))
   )
   
 

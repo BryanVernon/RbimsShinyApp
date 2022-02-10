@@ -1,11 +1,23 @@
 ---
-title: "Home"
-output: html_document
+title: "Welcome to RbiMs"
+output: 
+  rmarkdown::html_document:
+    theme: flatly
 ---
 
-# Visualizing metagenomic data for microorganisms  
+```{css, echo=FALSE}
 
-## Microorganisms are a very diverse group where many organisms share similar 
-## metabolic pathways and others are very unique. The purpose of this application 
-##is to help visualize these relationships between microorganism, their metabolic
-## pathways, and the genes that code for these pathways. 
+h1{
+  text-align: center;
+  }
+  
+
+```
+
+
+
+```{r echo=FALSE, out.width="35%", fig.align='center'}
+knitr::include_graphics("../Img/GetImage.png")
+```
+
+# An interactive open source software tool where we use R to reconstruct bin metabolisms (RbiMs).
