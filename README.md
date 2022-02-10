@@ -1,2 +1,2 @@
 # RbimsShinyApp
-Interactive Shiny app for RbiMs package in R
+Interactive Shiny app for the RbiMs package in R
