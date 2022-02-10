@@ -169,53 +169,46 @@ pre code {
 
 <div id="background" class="section level1">
 <h1>Background</h1>
+<hr />
 <div id="microorganisms-are-a-very-diverse-group-where-many-organisms-share-similar-metabolic-pathways-and-others-are-very-unique.-the-purpose-of-this-application-is-to-help-visualize-these-relationships-between-microorganisms-their-metabolic-pathways-and-the-genes-that-code-for-these-pathways." class="section level2">
 <h2>Microorganisms are a very diverse group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganisms, their metabolic pathways, and the genes that code for these pathways.</h2>
 </div>
 </div>
-<div id="rbims-tutorial" class="section level1">
-<h1>RbiMs tutorial</h1>
-<div id="step-1-upload-data-into-rbims" class="section level2">
-<h2>Step 1: Upload data into Rbims</h2>
-<div id="running-kegg-on-your-fasta-data" class="section level3">
-<h3>Running kegg on your FASTA data</h3>
+<div id="uploading-data-into-rbims" class="section level1">
+<h1>Uploading data into Rbims</h1>
+<hr />
+<style type="text/css">
+
+body {
+  font-size: 18pt;
+  }
+  
+
+</style>
+<ol style="list-style-type: decimal">
+<li>Uploading data using KofamKoala in KEGG</li>
+</ol>
 <ul>
-<li>Download assembly in a protein file
+<li><p>Prior to uploading your data to RbiMs there are some things we must do to prepare the data.</p></li>
+<li><p>First, download your assembly in a FASTA file.</p>
 <ul>
-<li>If using ncbi, downoad genbank protein FASTA file.faa</li>
+<li>If you’re uploading a file from NCBI, please follow the NCBI tutorial below.</li>
 </ul></li>
-<li>Make a folder and put the resulting .tar files in it</li>
-<li>for FILE in cd</li>
-<li>do</li>
-<li>tar -xvf jebdjwbd (3).tar</li>
-<li>gunzip ncbi [tab]/ GCA[tab]</li>
-<li>done</li>
-<li>This will result in .faa files in each folder</li>
-<li>Upload .faa files to KEGG in KofamKOALA
+<li><p>Upload .faa files to KEGG in KofamKOALA</p>
 <ul>
 <li><a href="https://www.genome.jp/tools/kofamkoala/" class="uri">https://www.genome.jp/tools/kofamkoala/</a></li>
 </ul></li>
-<li>Use the read_ko function in Rbims to read your output data</li>
-<li>bins&lt;- read_ko(data_kofam = “C:/Users/Bryan/Desktop/Bins/”) Error in read_ko(data_kofam = “C:/Users/Bryan/Desktop/Bins/”) : Must label scaffolds with the name ‘Scaffold’ or ‘scaffold’ after the bin name followed by a ‘-’ or ’_’.</li>
+<li><p>Once KEGG data is obtained, we need to change the gene names to indicate bins and scaffolds</p></li>
+<li><p>We do this by putting every row in gene name in the following format:</p>
+<ul>
+<li>Bin_xx-scaffold_xx or Bin_xx_scaffold_xx</li>
+</ul></li>
+<li><p>Now the data is ready to upload in the KEGG tab in the Upload data section</p></li>
 </ul>
-<p>#QA. – section #What is a tar, tar.gz file? And how do I open it? # A TAR file, or tape archive, or tarball is a Consolidated Unix Archive # format file. # You can open a .tar file with Open one with 7-Zip, B1 Online Archiver, and # other file unzip tools. # You should convert it to archive formats like ZIP, TAR.GZ, etc. # You can open .gz files with gunzip command in bash # What is refseq and genbank? #The NCBI Reference Sequence (RefSeq) project provides sequence records and #related information for numerous organisms, and provides a baseline for medical, #functional, and comparative studies. Whereas the International Nucleotide #Sequence Database Collaboration (INSDC, made up of GenBank, the European #Nucleotide Archive, and the DNA Data Bank of Japan) represents an archival #repository of all sequences, the RefSeq database is a non-redundant set of #reference standards derived from the INSDC databases that includes chromosomes, #complete genomic molecules (organelle genomes, viruses, plasmids), intermediate #assembled genomic contigs, curated genomic regions, mRNAs, RNAs, and proteins. # GenBank® is a comprehensive database that contains publicly available # nucleotide sequences for more than 300 000 organisms named at the genus level # or lower, obtained primarily through submissions from individual laboratories # and batch submissions from large-scale sequencing projects, including whole # genome shotgun (WGS) and environmental sampling projects.</p>
-</div>
-</div>
-</div>
-<div id="problems-i-encountered" class="section level1">
-<h1>Problems I encountered</h1>
-</div>
-<div id="could-not-tar--xvf-.tar-with-multiple-files-in-directory.-i-tried-doing" class="section level1">
-<h1>could not tar -xvf *.tar with multiple files in directory. I tried doing</h1>
-</div>
-<div id="tar--xvf-filename-1.tar-and-bash-was-not-reading-the-parenthesis-correctly" class="section level1">
-<h1>tar -xvf filename (1).tar and bash was not reading the parenthesis correctly</h1>
-</div>
-<div id="needed-a-at-end-of-path-when-using-read_ko.-need-to-fix-explor-kegg-tab." class="section level1">
-<h1>Needed a “/” at end of path when using read_ko. Need to fix explor kegg tab.</h1>
-</div>
-<div id="gene-name-does-not-have-scaffold-in-it-so-read_ko-did-not-work" class="section level1">
-<h1>gene name does not have “scaffold” in it so read_ko did not work</h1>
+<ol start="2" style="list-style-type: decimal">
+<li>Uploading data using Interpro</li>
+</ol>
+<p></font></p>
 </div>
 
 
