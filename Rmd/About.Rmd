@@ -5,10 +5,10 @@ output:
 ---
 
 
-# Background
+# Motivation
 
 ***
-## Microorganisms are a very diverse group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganisms, their metabolic pathways, and the genes that code for these pathways. 
+## Microorganisms are incredibly diverse,  group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganisms, their metabolic pathways, and the genes that code for these pathways. 
 
 
 # Uploading data into Rbims

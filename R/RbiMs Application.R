@@ -10,7 +10,7 @@ ui <- fluidPage(
                         titlePanel("Upload data"),
                         sidebarLayout(
                           sidebarPanel(
-                            fileInput("file1", "Choose your CSV File from KofamKOALA",
+                            fileInput("file1", "Choose your .csv or .txt File from KofamKOALA",
                                       accept = c(
                                         "text/csv",
                                         "text/comma-separated-values,text/plain",
@@ -36,6 +36,7 @@ server <- function(input, output, session) {
   library(tidyverse)
   library(ggplot2)
   library(shiny)
+  options(shiny.maxRequestSize=30*1024^2)
   filedata <- reactive({
     infile <- input$file1
     if (is.null(infile)){
