@@ -50,15 +50,8 @@ server <- function(input, output, session) {
   })
   output$KEGG <- renderUI({
     df <- filedata()
-    if (is.null(df)) return(NULL)})
-  #KEGG <- read_ko(data_kofam =  df)})
+    if (is.null(df)) return(NULL)
+  KEGG <- read_ko(data_kofam =  df)})
 }
 
 shinyApp(ui, server)
-# Define server logic required to draw a histogram
-#server <- function(input, output) {
-
-#}
-
-# Run the application 
-#shinyApp(ui = ui, server = server)
