@@ -1,12 +1,7 @@
 ---
-title: "Contact Us"
 output: 
   rmarkdown::html_document:
     theme: flatly
 ---
+
 # Contact Us
-
-#Bryan Vernon
-#3054870057
-
-#Mirna 

@@ -1,15 +1,14 @@
 ---
-title: "FAQ"
-author: "Bryan Vernon"
-date: "2/10/2022"
-output: html_document
+output: 
+  rmarkdown::html_document:
+    theme: flatly
 ---
 # QA. – section
 
-1. What is the difference between KEGG and Interpro
+1. What is the difference between KEGG and Interpro?
 2. What"s a bin?
 3. What's a scaffold?
-#What is a tar, tar.gz file? And how do I open it?
+# What is a tar, tar.gz file? And how do I open it?
 # A TAR file, or tape archive, or tarball is a Consolidated Unix Archive 
 # format file.
 # You can open a .tar file with Open one with 7-Zip, B1 Online Archiver, and 
@@ -17,15 +16,15 @@ output: html_document
 # You should convert it to archive formats like ZIP, TAR.GZ, etc.
 # You can open .gz files with gunzip command in bash
 # What is refseq and genbank?
-#The NCBI Reference Sequence (RefSeq) project provides sequence records and 
-#related information for numerous organisms, and provides a baseline for medical,
-#functional, and comparative studies. Whereas the International Nucleotide 
-#Sequence Database Collaboration (INSDC, made up of GenBank, the European 
-#Nucleotide Archive, and the DNA Data Bank of Japan) represents an archival
-#repository of all sequences, the RefSeq database is a non-redundant set of 
-#reference standards derived from the INSDC databases that includes chromosomes, 
-#complete genomic molecules (organelle genomes, viruses, plasmids), intermediate 
-#assembled genomic contigs, curated genomic regions, mRNAs, RNAs, and proteins.
+# The NCBI Reference Sequence (RefSeq) project provides sequence records and 
+# related information for numerous organisms, and provides a baseline for medical,
+# functional, and comparative studies. Whereas the International Nucleotide 
+# Sequence Database Collaboration (INSDC, made up of GenBank, the European 
+# Nucleotide Archive, and the DNA Data Bank of Japan) represents an archival
+# repository of all sequences, the RefSeq database is a non-redundant set of 
+# reference standards derived from the INSDC databases that includes chromosomes, 
+# complete genomic molecules (organelle genomes, viruses, plasmids), intermediate 
+# assembled genomic contigs, curated genomic regions, mRNAs, RNAs, and proteins.
 # GenBank® is a comprehensive database that contains publicly available 
 # nucleotide sequences for more than 300 000 organisms named at the genus level
 # or lower, obtained primarily through submissions from individual laboratories 
