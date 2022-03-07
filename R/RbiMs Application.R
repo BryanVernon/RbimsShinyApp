@@ -18,8 +18,7 @@ ui <- fluidPage(
                                       ),
                             ),
                         mainPanel( plotOutput("KEGG"),
-                                   h4("My data", align = "left"),
-                                   tableOutput("contents"))
+                                   h4("My data", align = "left"))
                         )
                       )
              ),
@@ -43,10 +42,6 @@ server <- function(input, output, session) {
       return(NULL)      
     }
     read.csv(infile$datapath)
-  })
-  output$contents = renderTable({
-    df <- filedata()
-    return(df)
   })
   output$KEGG <- renderUI({
     df <- filedata()
