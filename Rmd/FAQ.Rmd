@@ -6,8 +6,8 @@ output:
 # QA. – section
 
 1. What is the difference between KEGG and Interpro?
-2. What"s a bin?
-3. What's a scaffold?
+2. What is a bin?
+3. What is a scaffold?
 # What is a tar, tar.gz file? And how do I open it?
 # A TAR file, or tape archive, or tarball is a Consolidated Unix Archive 
 # format file.

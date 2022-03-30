@@ -8,7 +8,7 @@ output:
 # Motivation
 
 ***
-## Microorganisms are incredibly diverse,  group where many organisms share similar metabolic pathways and others are very unique. The purpose of this application is to help visualize these relationships between microorganisms, their metabolic pathways, and the genes that code for these pathways. 
+## Microorganisms are incredibly diverse, and this diversity is also reflected in their metabolic capabilities (Hug et al. 2016). The RbiMs shiny app is designed to help visualize the metabolic pathways reconstructed through KEGG.
 
 
 # Uploading data into Rbims

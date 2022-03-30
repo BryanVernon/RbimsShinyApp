@@ -10,15 +10,18 @@ ui <- fluidPage(
                         titlePanel("Upload data"),
                         sidebarLayout(
                           sidebarPanel(
-                            fileInput("file1", "Choose your .csv or .txt File from KofamKOALA",
+                            fileInput("file1", "Choose your .csv or .txt file from KofamKOALA",
                                       accept = c(
                                         "text/csv",
                                         "text/comma-separated-values,text/plain",
                                         ".csv")
                                       ),
+                            actionButton(inputId = "view", label = "View"),
+                            actionButton(inputId = "mapping", label = "Map"),
+                            actionButton(inputId = "export", label = "Export"),
+                            actionButton(inputId = "plot", label = "Plot")
                             ),
-                        mainPanel( plotOutput("KEGG"),
-                                   h4("My data", align = "left"))
+                        mainPanel(plotOutput("KEGG"))
                         )
                       )
              ),
@@ -47,6 +50,7 @@ server <- function(input, output, session) {
     df <- filedata()
     if (is.null(df)) return(NULL)
   KEGG <- read_ko(data_kofam =  df)})
+  
 }
 
 shinyApp(ui, server)
