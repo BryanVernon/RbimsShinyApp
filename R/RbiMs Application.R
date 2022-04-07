@@ -49,7 +49,7 @@ server <- function(input, output, session) {
   output$KEGG <- renderUI({
     df <- filedata()
     if (is.null(df)) return(NULL)
-  KEGG <- read_ko(data_kofam =  df)})
+  KEGG <- read_ko_shiny(data_kofam =  df)})
   
 }
 
