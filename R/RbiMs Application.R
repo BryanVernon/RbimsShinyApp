@@ -11,17 +11,18 @@ ui <- fluidPage(
                         sidebarLayout(
                           sidebarPanel(
                             fileInput("file1", "Choose your .csv or .txt file from KofamKOALA",
-                                      accept = c(
-                                        "text/csv",
-                                        "text/comma-separated-values,text/plain",
-                                        ".csv")
-                                      ),
+                                      #accept = c(
+                                      # "text/csv",
+                                      #"text/comma-separated-values,text/plain",
+                                      #".csv")
+                            ),
+                            checkboxInput("use_example", "Use example data"),
                             actionButton(inputId = "view", label = "View"),
                             actionButton(inputId = "mapping", label = "Map"),
                             actionButton(inputId = "export", label = "Export"),
                             actionButton(inputId = "plot", label = "Plot")
-                            ),
-                        mainPanel(plotOutput("KEGG"))
+                          ),
+                          mainPanel(tableOutput("table1"))
                         )
                       )
              ),
@@ -41,16 +42,28 @@ server <- function(input, output, session) {
   options(shiny.maxRequestSize=30*1024^2)
   filedata <- reactive({
     infile <- input$file1
-    if (is.null(infile)){
-      return(NULL)      
-    }
-    read.csv(infile$datapath)
+    # if (is.null(infile)){
+    #   return(NULL)      
+    # }
+    infile<-(infile[1,1])
+    #cat(infile)
+    #table1<-read_ko(infile)
+    validate(need(infile, message = 'Please choose a file'))
+    infile
   })
-  output$KEGG <- renderUI({
-    df <- filedata()
-    if (is.null(df)) return(NULL)
-  KEGG <- read_ko(data_kofam =  df)})
+  df<- reactive({
+    if(input$use_example == FALSE){
+      ko <- read_ko(data_kofam = filedata())
+    }else{
+      example <- data.frame(c(1,2,3))
+      example
+    }
+    #read_ko(data_kofam = filedata())
+  })
   
+  output$table1 <- renderTable({
+    df()
+  })
 }
 
 shinyApp(ui, server)
