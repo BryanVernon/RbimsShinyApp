@@ -12,11 +12,18 @@ ui <- fluidPage(
                           sidebarPanel(
                             fileInput("file1", "Choose your .csv or .txt file from KofamKOALA",
                                       #accept = c(
+<<<<<<< HEAD
                                       # "text/csv",
                                       #"text/comma-separated-values,text/plain",
                                       #".csv")
                             ),
                             checkboxInput("use_example", "Use example data"),
+=======
+                                       # "text/csv",
+                                        #"text/comma-separated-values,text/plain",
+                                        #".csv")
+                                      ),
+>>>>>>> cd955088e567b2e2ce8e0c337243a460711b3bc1
                             actionButton(inputId = "view", label = "View"),
                             actionButton(inputId = "mapping", label = "Map"),
                             actionButton(inputId = "export", label = "Export"),
@@ -58,8 +65,19 @@ server <- function(input, output, session) {
       example <- data.frame(c(1,2,3))
       example
     }
+<<<<<<< HEAD
     #read_ko(data_kofam = filedata())
   })
+=======
+    infile<-(infile[1,1])
+    cat(infile)
+    table_2<-read_ko_shiny(infile)
+  })
+  #output$KEGG <- renderUI({
+   # df <- filedata()
+  #  if (is.null(df)) return(NULL)
+  #KEGG <- read_ko_shiny(data_kofam =  df)})
+>>>>>>> cd955088e567b2e2ce8e0c337243a460711b3bc1
   
   output$table1 <- renderTable({
     df()
